@@ -1,3 +1,7 @@
+import Button from "../ui/button";
+import TextArea from "../ui/text-area";
+import TextInput from "../ui/text-input";
+
 export default function Hero() {
   return (
     <div className="flex border">
@@ -13,8 +17,9 @@ export default function Hero() {
 
         <div className="flex items-center gap-2 w-full -mt-[10vh]">
           <span className="text-withe text-xl">projectinbio.com/</span>
-          <input type="text" />
-          <button>Criar agora</button>
+          <TextInput placeholder="Digite seu link" />
+          <Button> Criar agora</Button>
+          <TextArea />
         </div>
       </div>
       <div className="w-full flex items-center justify-center bg-[radial-gradient{circle_at_50%_50%,#4b2dBB, transparent_55%}]">
