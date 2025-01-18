@@ -26,4 +26,5 @@ if (!getApps().length) {
 
 export const db = getFirestore();
 
+
 export const storage = getStorage().bucket();
