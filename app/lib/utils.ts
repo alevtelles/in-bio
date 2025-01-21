@@ -37,7 +37,6 @@ export const compressImage = (file: File): Promise<File> => {
             maxWidthOrHeight: 900,
             useWebWorker: true,
             fileType: "image/png"
-        
         };
 
         imageCompression(file, options).then((compressFile) => {

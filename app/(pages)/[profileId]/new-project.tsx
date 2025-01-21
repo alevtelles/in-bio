@@ -65,6 +65,7 @@ export function NewPorject({ profileId }: { profileId: string }) {
       setProjectDescription("");
       setProjectUrl("");
       setProjectImage(null);
+
       router.refresh();
     });
   }

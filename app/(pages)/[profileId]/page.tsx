@@ -1,11 +1,11 @@
-import ProjectCard from "@/app/components/commons/project-card";
 import TotalVisits from "@/app/components/commons/total-visits";
 import UserCard from "@/app/components/commons/user-card";
-import { getProfileData, getProfileProjects } from "@/app/server/get-profile";
 import { auth } from "@/app/lib/auth";
+import { getProfileData, getProfileProjects } from "@/app/server/get-profile";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { NewPorject } from "./new-project";
+import ProjectCard from "@/app/components/commons/project-card";
 import { getDownloadUrlFromPath } from "@/app/lib/firebase";
 
 export default async function ProfilePage({
@@ -49,7 +49,7 @@ export default async function ProfilePage({
             key={project.id}
             project={project}
             isOwner={isOwner}
-            img={await getDownloadUrlFromPath(project.imagePath)}
+            img={(await getDownloadUrlFromPath(project.imagePath)) || ""}
           />
         ))}
 
